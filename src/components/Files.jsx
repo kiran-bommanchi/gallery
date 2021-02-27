@@ -25,16 +25,15 @@ function Files(props) {
   const arrayOfPost = useSelector((state) => state.firstreducer, shallowEqual);
 
   function handleScroll() {
-    console.log(
-      Math.round(window.innerHeight + document.documentElement.scrollTop),
-      document.documentElement.offsetHeight
-    );
-    if (
-      Math.round(window.innerHeight + document.documentElement.scrollTop) !==
-      document.documentElement.offsetHeight
-    )
-      return;
-    setIsFetching(true);
+    const scrollTop = (document.documentElement
+      && document.documentElement.scrollTop)
+      || document.body.scrollTop;
+    const scrollHeight = (document.documentElement
+      && document.documentElement.scrollHeight)
+      || document.body.scrollHeight;
+    if (scrollTop + window.innerHeight + 50 >= scrollHeight){
+      setIsFetching(true);
+    }
     console.log("Fetch more list items!");
   }
 

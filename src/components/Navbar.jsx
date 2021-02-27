@@ -74,13 +74,16 @@ function Header(props) {
 
   console.log(pageCount);
   useEffect(() => {
-    console.log("get photos: ======> ", pageCount, props.isFetching);
+    console.log("get photos load more: ======> ", pageCount, props.isFetching);
     if (props.isFetching) {
       setPageCount(pageCount + 1);
       loadImages();
-    } else {
-      getPhotos();
     }
+  }, [props.isFetching]);
+
+  useEffect(() => {
+    console.log("get photos: ======> ", pageCount, props.isFetching);
+      getPhotos();
   }, [searchText]);
 
   const clearText = () => {

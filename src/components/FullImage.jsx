@@ -49,12 +49,12 @@ function FullImage(props) {
         <Col>downloads:{singleImage.downloads}</Col>
     </Row>
     <Row className="mt-2">
-        <Col><a href={singleImage.pageURL}> PageUrl</a></Col>
-        <Col><a href={singleImage.largeImageURL}> large Image Url</a></Col>
+        <Col><a href={singleImage.pageURL} target="_blank"> PageUrl</a></Col>
+        <Col><a href={singleImage.largeImageURL} target="_blank"> large Image Url</a></Col>
         </Row>
     <Row className="mt-2">    
-        <Col><a href={singleImage.previewURL}> Preview </a></Col>
-        <Col><a href={singleImage.webformatURL}> webformatURL </a></Col>
+        <Col><a href={singleImage.previewURL} target="_blank"> Preview </a></Col>
+        <Col><a href={singleImage.webformatURL} target="_blank"> webformatURL </a></Col>
     </Row>
   </Card.Body>
 </Card>

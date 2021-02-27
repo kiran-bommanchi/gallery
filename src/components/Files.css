@@ -16,6 +16,9 @@
     -moz-transition: margin .25s ease-out;
     -o-transition: margin .25s ease-out;
     transition: margin .25s ease-out;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    right: 0;
 }
 #sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
