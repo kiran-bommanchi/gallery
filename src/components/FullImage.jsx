@@ -20,7 +20,7 @@ function FullImage(props) {
         <>
     <Container style={{textTransform:"capitalize"}}>
     <Card  bg="dark" text="white" style={{ width: "30rem", height: "100vh" }}>
-  <Card.Img variant="top" src={singleImage.webformatURL} />
+  <Card.Img variant="top" src={singleImage.webformatURL} style={{height:"50%"}}/>
   <Card.Body>
     <Card.Title><Row>
     <Col onClick={()=>props.setShowDetail(false)} style={{color:"red" }}>Close X</Col></Row></Card.Title>

@@ -125,7 +125,7 @@ function Files(props) {
            </Row>
            </Col>
            {showDetail ? (<Col xs={4} id="sidebar-wrapper">      
-            <FullImage selectedImage={selectedImage} setShowDetail={setShowDetail} />
+            <FullImage selectedImage={selectedImage} setShowDetail={setShowDetail}  />
            </Col>) : null}
        </Row>
         </Container>
